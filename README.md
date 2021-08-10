@@ -12,7 +12,11 @@ run: <code>npm install</code>
 run: <code>npm run build</code>
 
 #### 3. Create the images and run
+from top
 run: <code>docker-compose up --build</code>
+
+#### 4. Open application
+On a browser, direct to http://127.0.0.1:8080
 
 
 ## Restart:
