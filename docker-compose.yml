@@ -47,13 +47,13 @@ services:
         source: ./configurations/nginx.conf
         target: /etc/nginx/nginx.conf
       - type: bind
-        source: ./client/build/
+        source: ./xample/client/webapp/build/
         target: /var/www/html
 
   flask:
     container_name: flask
     build: 
-      context: ./server
+      context: ./xample/server
       dockerfile: Dockerfile
     depends_on:
       - postgres
@@ -67,16 +67,16 @@ services:
         source: ./storage/
         target: /usr/src/storage
       - type: bind
-        source: ./server/
+        source: ./xample/server/
         target: /usr/src/flask
     env_file:
       - .env
-      - ./server/.env.server
+      - ./xample/server/.env.server
 
   business:
     container_name: business
     build:
-      context: ./business
+      context: ./xample/business
       dockerfile: Dockerfile
     depends_on:
       - postgres
@@ -88,11 +88,11 @@ services:
       - 2000:80
     volumes:
       - type: bind
-        source: ./business/
+        source: ./xample/business/
         target: /app/src
     env_file:
       - .env
-      - ./business/.env.business
+      - ./xample/business/.env.business
 
 networks:
   app_network:

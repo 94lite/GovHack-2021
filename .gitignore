@@ -1,2 +1,4 @@
 postgres/data/
 redis/data/
+node_modules/
+build/
