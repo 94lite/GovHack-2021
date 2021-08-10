@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import DisplayTime from './DisplayTime';
+import LongWork from './LongWork';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </a>
         <div>
           <DisplayTime />
+          <LongWork />
         </div>
       </header>
     </div>
