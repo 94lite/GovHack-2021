@@ -18,7 +18,7 @@ export default function DisplayTime() {
 
   return (
     <div style={style}>
-      <button onClick={() => getTime()}>get time</button>
+      <button onClick={() => getTime()}>get time from flask/server</button>
       <div>{time}</div>
     </div>
   )
