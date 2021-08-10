@@ -3,3 +3,4 @@
 # Create folders
 mkdir -p postgres/data;
 mkdir -p redis/data;
+mkdir -p storage;
