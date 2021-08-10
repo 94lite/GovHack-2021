@@ -29,5 +29,5 @@ const style = {
   flexDirection: 'column',
   justifyContent: 'space-evenly',
   alignContent: 'center',
-  height: '100px'
+  marginTop: '24px'
 }

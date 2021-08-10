@@ -9,7 +9,7 @@ run: <code>bash init_folders.sh</code>
 #### 2. Build the react app
 change directory into xample/client/webapp
 run: <code>npm install</code>
-run: <code>npm run build</code>
+run: <code>npm run watch</code>
 
 #### 3. Create the images and run
 from top
