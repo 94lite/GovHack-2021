@@ -1,0 +1,9 @@
+[submodule "client"]
+    path = client
+    url = https://github.com/presdk/govhack-2021-frontend.git
+[submodule "server"]
+	path = server
+	url = https://github.com/CheeseStick/govhack-2021-backend-api.git
+[submodule "business"]
+	path = business
+	url = https://github.com/94lite/govhack-2021-business.git
