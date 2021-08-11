@@ -2,15 +2,15 @@ import json
 import time
 import redis
 
-redis_db = redis.StrictRedis(host='redis')
-redis_q = 'task_queue'
+REDIS_DB = redis.StrictRedis(host='redis')
+REDIS_Q = 'task_queue'
 
 while True:
     print("hello world")
     try:
-        with redis_db.pipeline() as pipe:
-            pipe.lrange(redis_q, 0, 0)
-            pipe.ltrim(redis_q, 1, -1)
+        with REDIS_DB.pipeline() as pipe:
+            pipe.lrange(REDIS_Q, 0, 0)
+            pipe.ltrim(REDIS_Q, 1, -1)
             queue, _ = pipe.execute()
         for task in queue:
             print(task.decode('utf-8'))

@@ -1,17 +1,25 @@
 from flask import Flask
 from flask import Response, request, jsonify
 from http import HTTPStatus
-from datetime import datetime
 import json
 import redis
 import uuid
+from datetime import datetime
+from . import db_utils as pgdb
 
+# ____________________
+# I N I T  A P P
 print("starting")
 app = Flask(__name__)
 
-redis_db = redis.StrictRedis(host='redis')
-redis_q = 'task_queue'
+# ____________________
+# I N I T  R E D I S
 
+REDIS_DB = redis.StrictRedis(host='redis')
+REDIS_Q = 'task_queue'
+
+# ____________________
+# A P I
 
 @app.route('/api/')
 def hello_world():  # put application's code here
@@ -41,7 +49,7 @@ def api_longWork():
             'id': taskID,
             'topic': 'long_work'
         }
-        redis_db.rpush(redis_q, json.dumps(task))
+        REDIS_DB.rpush(REDIS_Q, json.dumps(task))
         return jsonify({
             'success': True,
             'id': taskID
@@ -52,6 +60,8 @@ def api_longWork():
 def health_check():
     return Response(response="", status=HTTPStatus.NO_CONTENT)
 
+# ____________________
+# M A I N
 
 if __name__ == '__main__':
     app.run()
