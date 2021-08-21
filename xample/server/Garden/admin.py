@@ -1,5 +1,10 @@
 from django.contrib import admin
-from .models import UserTree, CommunityTree
+from .models import TreeType, UserTree, CommunityTree
+
+
+@admin.register(TreeType)
+class TreeTypeAdmin(admin.ModelAdmin):
+    pass
 
 
 @admin.register(UserTree)

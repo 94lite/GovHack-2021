@@ -1,11 +1,22 @@
 from rest_framework import serializers
-from .models import UserTree, CommunityTree
+from .models import TreeType, UserTree, CommunityTree
+
+
+class TreeTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TreeType
+        fields = ["id", "name", "genus", "description", "image_url", "maturity_rate", "price", ]
 
 
 class UserTreeSerializer(serializers.ModelSerializer):
+    tree_info = serializers.SerializerMethodField(method_name="get_tree_info")
+
+    def get_tree_info(self, instance: UserTree):
+        return TreeTypeSerializer(instance.tree_type).data
+
     class Meta:
         model = UserTree
-        fields = ["id", "user", "tree_type_id", "planted_at",]
+        fields = ["id", "name", "description", "tree_info", "planted_at", "planted_by", ]
 
 
 class CommunityTreeSerializer(serializers.ModelSerializer):
