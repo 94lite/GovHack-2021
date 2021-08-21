@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import { useEffect, useState } from 'react';
 import JourneyOptionList from './components/JourneyOptionList';
 import { GoogleMapContainer, MapsPage as StyledMapsPage, StyledSearch } from "./styles";
-import { getTransportation } from '../../apis/apis';
+import { getTransportation, GOOGLE_MAP_API_KEY } from '../../apis/apis';
 
 const MapsPage = () => {
     const [searchDestination, setSearchDestination] = useState(null);
@@ -73,7 +73,7 @@ const MapsPage = () => {
             {selectedJourneyOption && (
                 <GoogleMapContainer>
                     <GoogleMapReact
-                        bootstrapURLKeys={{ key: "AIzaSyBy8azrhY9H5wtrRzBA2PTF4-wvGsTc4Xo" }}
+                        bootstrapURLKeys={{ key: GOOGLE_MAP_API_KEY }}
                         defaultCenter={defaultProps.center}
                         defaultZoom={defaultProps.zoom}
                         yesIWantToUseGoogleMapApiInternals
