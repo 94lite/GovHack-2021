@@ -33,6 +33,7 @@ DEBUG = bool(os.environ.get("DJANGO_RUNTIME_LEVEL", "PRODUCTION").upper() == "DE
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
+    "flask"
 ]
 
 
