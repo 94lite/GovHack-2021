@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # Libraries
     "rest_framework",
     "corsheaders",
+    "knox",
 
     # Apps
     "UserAccount.apps.UserAccountConfig",
@@ -193,3 +194,16 @@ AUTH_USER_MODEL = "UserAccount.User"
 # https://github.com/adamchainz/django-cors-headers
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+# Django Rest Framework
+# https://www.django-rest-framework.org
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        'knox.auth.TokenAuthentication',
+    ]
+}
+
