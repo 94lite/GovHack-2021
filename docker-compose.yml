@@ -52,6 +52,7 @@ services:
 
   flask:
     container_name: flask
+	restart: always
     build: 
       context: ./xample/server
       dockerfile: Dockerfile
