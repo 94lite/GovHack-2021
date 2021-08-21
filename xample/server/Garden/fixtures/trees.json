@@ -1,0 +1,122 @@
+[
+  {
+    "model": "Garden.TreeType",
+    "pk": 1,
+    "fields": {
+      "name": "Kauri (Agathis)",
+      "genus": "Agathis australis",
+      "description": "Agathis australis, commonly known by its Māori name kauri (pronounced \"Ko-ree\"), is a coniferous tree in the family Araucariaceae, found north of 38°S in the northern regions of New Zealand's North Island.",
+      "maturity_rate": 0,
+      "price": 3000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/00_29_0496_Waipoua_Forest_NZ_-_Kauri_Baum_Tane_Mahuta.jpg"
+    }
+  },
+  {
+    "model": "Garden.TreeType",
+    "pk": 2,
+    "fields": {
+      "name": "Rimu",
+      "genus": "Dacrydium cupressinum,",
+      "description": "Dacrydium cupressinum, commonly known as rimu, is a large evergreen coniferous tree endemic to the forests of New Zealand. It is a member of the southern conifer group, the podocarps. The former name \"red pine\" has fallen out of common use.",
+      "maturity_rate": 0,
+      "price": 5000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Rimu-Waitakere.jpg"
+    }
+  },
+  {
+    "model": "Garden.TreeType",
+    "pk": 3,
+    "fields": {
+      "name": "Pūriri",
+      "genus": "Vitex lucens",
+      "description": "The Puriri tree can grow up to 20 m tall, with a trunk commonly up to 1.5 m in diameter, frequently thicker, and a broad spreading crown. The thin bark is usually smooth and light brown in colour, but can also be very flaky. Puriri was actively and selectively logged in the past to provide timber for a wide range of end uses.",
+      "maturity_rate": 0,
+      "price": 2500,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Puriri.jpg"
+    }
+  },
+  {
+    "model": "Garden.TreeType",
+    "pk": 4,
+    "fields": {
+      "name": "Tī Kōuka",
+      "genus": "Cordyline australis",
+      "description": "Cordyline australis, commonly known as the cabbage tree, tī kōuka or cabbage-palm, is a widely branched monocot tree endemic to New Zealand. It grows up to 20 metres (66 feet) tall with a stout trunk and sword-like leaves, which are clustered at the tips of the branches and can be up to 1 metre (3 feet 3 inches) long. With its tall, straight trunk and dense, rounded heads, it is a characteristic feature of the New Zealand landscape. Its fruit is a favourite food source for the New Zealand pigeon and other native birds.",
+      "maturity_rate": 0,
+      "price": 2000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/CabbageTreeKaihoka.jpg"
+    }
+  },
+  {
+    "model": "Garden.TreeType",
+    "pk": 5,
+    "fields": {
+      "name": "Kawakawa",
+      "genus": "Cranfillia fluviatilis",
+      "description": "Cranfillia fluviatilis, synonym Blechnum fluviatile, is a fern known in the Māori language as kiwikiwi. A herbaceous plant, C. fluviatilis is a \"hard fern\" of the genus Cranfillia in the family Blechnaceae. It was identified by Patrick Brownsey in 1979. Other common names are star fern, creek fern, kawakawa and kiwakiwa.",
+      "maturity_rate": 0,
+      "price": 8000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Cranfillia_fluviatilis_58295612.jpg"
+    }
+  },
+  {
+    "model": "Garden.TreeType",
+    "pk": 6,
+    "fields": {
+      "name": "Kahikatea",
+      "genus": "Dacrycarpus dacrydioides",
+      "description": "Dacrycarpus dacrydioides or kahikatea (from its name in the Māori language) is a coniferous tree endemic to New Zealand.\n\nThe tree grows to a height of 55 metres (180 ft) with a trunk exceeding 1 metre (3 ft) in diameter, and is buttressed at the base. It is dominant in lowland forest and wetlands throughout the North and South Islands. Trees can live for at least 600 years.",
+      "maturity_rate": 0,
+      "price": 3800,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Kahikatea.jpg"
+    }
+  },
+  {
+    "model": "Garden.TreeType",
+    "pk": 7,
+    "fields": {
+      "name": "Nīkau",
+      "genus": "Rhopalostylis sapida",
+      "description": "Rhopalostylis sapida, nīkau (Māori: nīkau) or nikau is a palm tree endemic to New Zealand, and the only palm native to mainland New Zealand.",
+      "maturity_rate": 0,
+      "price": 6400,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/NikauPalmNZ.jpg"
+    }
+  },
+  {
+    "model": "Garden.TreeType",
+    "pk": 8,
+    "fields": {
+      "name": "Kānuka",
+      "genus": "Kunzea ericoides",
+      "description": "Kunzea ericoides, commonly known as kānuka, kanuka, white tea-tree or burgan, is a tree or shrub in the myrtle family, Myrtaceae and is endemic to New Zealand. It has white or pink flowers similar to those of Leptospermum and from its first formal description in 1832 until 1983 was known as Leptospermum ericoides. The flowers have five petals and up to 25 stamens which are mostly longer than the petals.",
+      "maturity_rate": 0,
+      "price": 4800,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Kunzea_ericoides.jpg"
+    }
+  },
+  {
+    "model": "Garden.TreeType",
+    "pk": 9,
+    "fields": {
+      "name": "Kōwhai",
+      "genus": "Sophora",
+      "description": "Kōwhai (Māori pronunciation: [kɔːɸai] or [kɔːfai]) are small woody legume trees within the genus Sophora in the family Fabaceae that are native to New Zealand. There are eight species, with Sophora microphylla and S. tetraptera being the most recognised as large trees. Their natural habitat is beside streams and on the edges of forest, in lowland or mountain open areas. Kōwhai trees grow throughout the country and are a common feature in New Zealand gardens. Outside of New Zealand, kōwhai tend to be restricted to mild temperate maritime climates.",
+      "maturity_rate": 0,
+      "price": 5890,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Kowhai_in_full_bloom_at_Papakowhai_School.jpg"
+    }
+  },
+  {
+    "model": "Garden.TreeType",
+    "pk": 10,
+    "fields": {
+      "name": "Tōtara",
+      "genus": "Podocarpus totara",
+      "description": "Podocarpus totara (from the Maori-language tōtara; the spelling \"totara\" is also common in English) is a species of podocarp tree endemic to New Zealand. It grows throughout the North Island and northeastern South Island in lowland, montane and lower subalpine forest at elevations of up to 600 m.",
+      "maturity_rate": 0,
+      "price": 7450,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/PodocarpusTotara2.jpg"
+    }
+  }
+]
