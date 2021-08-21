@@ -30,6 +30,7 @@ export default function TreeInfo() {
       >
         <p style={p_style}><u>Genus:</u> <i>Dacrycarpus</i></p>
         <p style={p_style}><u>Description:</u> This tall swamp tree was around in the Jurassic period, which is why they are sometimes called dinosaur trees.</p>
+        <p style={p_style}><u>Plantation Location:</u> Manawatu</p>
         <p style={p_style}><u>Plantation Date:</u> 24 Nov. 2020</p>
       </Card>
     </div>
