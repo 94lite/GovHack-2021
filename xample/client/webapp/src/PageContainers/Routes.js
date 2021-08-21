@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import Garden from './Garden/Garden';
 import { Button } from "antd";
 import MapsPage from './Maps/MapsPage';
+import ProfilePage from './Profile/ProfilePage';
+import RegisterPage from './Register/RegisterPage';
 
 // Page options: "profile" (default), "maps", "garden"
 
@@ -32,6 +34,9 @@ export default function Routes() {
     case "garden":
       return <Garden />
     case "profile":
+      return <ProfilePage />
+    case "register":
+      return <RegisterPage />
     default:
       return (
         <div className="app-profile">
