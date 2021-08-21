@@ -32,8 +32,17 @@ fi
 
 printf "\n"
 
-echo "Load fixtures..."
+echo "Load fixtures... (Transportations)"
 if python3 manage.py loaddata transportations.json; then
+  echo "Fixtures loaded."
+else
+  echo "Failed to load fixtures."
+fi
+
+printf "\n"
+
+echo "Load fixtures... (Trees)"
+if python3 manage.py loaddata trees.json; then
   echo "Fixtures loaded."
 else
   echo "Failed to load fixtures."
