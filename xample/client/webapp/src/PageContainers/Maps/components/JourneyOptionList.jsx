@@ -4,16 +4,15 @@ import Title from "antd/lib/typography/Title";
 const JourneyOptionList = ({ journeys, onOptionClick }) => {
     return (
         <div>
-            {journeys.map(journey => getJourneyCard(journey, onOptionClick))}
+            {journeys && journeys.map(journey => getJourneyCard(journey, onOptionClick))}
         </div>
     )
 }
 
 /**
-     *    type: 'Car',
-        leaveAtTime: '2:22pm',
-        arriveByTime: '2:59pm',
-        emissionsByGrams: '1590g'
+    "name": "Ferry",
+    "carbon_point_per_km": 19.0,
+    "speed_km_per_hour": 0.0
      */
 const getJourneyCard = (journey, onOptionClick) => {
     return (
@@ -21,18 +20,18 @@ const getJourneyCard = (journey, onOptionClick) => {
             <Card hoverable style={{ width: "100%" }} onClick={() => onOptionClick(journey)}>
                 <Row gutter={[0, 12]}>
                     <Col span={12}>
-                        <Title level={5}>{journey.type}</Title>
+                        <Title level={5}>{journey.name}</Title>
                     </Col>
-                    <Col span={12} style={{ textAlign: "right" }}>
+                    <Col offset={7} span={5} style={{ textAlign: "right" }}>
                         <div style={{ textAlign: 'center', backgroundColor: "#108ee9", marginRight: 0, paddingTop: 2, paddingBottom: 2, paddingLeft: 12, paddingRight: 12 }}>
-                            <span style={{color:'white', fontSize:16}}><b>{journey.emissionsByGrams}</b></span>
+                            <span style={{color:'white', fontSize:16}}><b>{journey.carbon_point_per_km}</b></span>
                         </div>
                     </Col>
                     <Col span={12}>
-                        <b>Leave at {journey.leaveAtTime}</b>
+                        <b>Leave at {new Date().getTime()}</b>
                     </Col>
                     <Col span={12} style={{ textAlign: "right" }}>
-                        Arrive by {journey.arriveByTime}
+                        Arrive by {new Date().getTime() + 10}
                     </Col>
                 </Row>
             </Card>
