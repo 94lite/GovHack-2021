@@ -37,7 +37,7 @@ services:
     image: nginx
     depends_on:
       - flask
-    # restart: unless-stopped
+    restart: unless-stopped
     networks:
       - app_network
     ports:
