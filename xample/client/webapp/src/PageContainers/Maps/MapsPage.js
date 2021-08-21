@@ -5,45 +5,11 @@ import JourneyOptionList from './components/JourneyOptionList';
 import { GoogleMapContainer, MapsPage as StyledMapsPage, StyledSearch } from "./styles";
 import { getTransportation } from '../../apis/apis';
 
-const journeys = [
-    {
-        type: 'Walk',
-        leaveAtTime: '2:22pm',
-        arriveByTime: '2:59pm',
-        emissionsByGrams: '1g'
-    },
-    {
-        type: 'E Scooter',
-        leaveAtTime: '2:22pm',
-        arriveByTime: '2:59pm',
-        emissionsByGrams: '10g'
-    },
-    {
-        type: 'Bike',
-        leaveAtTime: '2:22pm',
-        arriveByTime: '2:59pm',
-        emissionsByGrams: '1590g'
-    },
-    {
-        type: 'Train',
-        leaveAtTime: '2:22pm',
-        arriveByTime: '2:59pm',
-        emissionsByGrams: '1590g'
-    },
-    {
-        type: 'Car',
-        leaveAtTime: '2:22pm',
-        arriveByTime: '2:59pm',
-        emissionsByGrams: '1590g'
-    },
-]
-
 const MapsPage = () => {
     const [searchDestination, setSearchDestination] = useState(null);
 
     const [journeyOptions, setJourneyOptions] = useState([]);
     const [selectedJourneyOption, setSelectedJourneyOption] = useState(null);
-    const [journeyMapPoints, setJourneyMapPoints] = useState([]);
 
     const defaultProps = {
         center: {
@@ -55,7 +21,6 @@ const MapsPage = () => {
 
     useEffect(() => {
         if (searchDestination) {
-            setJourneyMapPoints([]);
             setSelectedJourneyOption(null);
             (async function (){
                 const options = await getTransportation();
@@ -63,12 +28,6 @@ const MapsPage = () => {
             })();
         }
     }, [searchDestination]);
-
-    useEffect(() => {
-        if (selectedJourneyOption) {
-            setJourneyMapPoints([1])
-        }
-    }, [selectedJourneyOption])
 
     const onSearch = (value) => {
         console.log(`Searching destination=[${value}]`);
