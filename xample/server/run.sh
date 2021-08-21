@@ -24,13 +24,20 @@ fi
 printf "\n"
 
 echo "Creating superuser..."
-if python3 manage.py shell < init_superuser.py; then
+if python3 manage.py loaddata < init_superuser.py; then
   echo "Superuser has been created."
 else  # As super user is not an essential thing, keep going.
   echo "Failed to create superuser."
 fi
 
 printf "\n"
+
+echo "Load fixtures..."
+if python3 manage.py loaddata transportations.json; then
+  echo "Fixtures loaded."
+else
+  echo "Failed to load fixtures."
+fi
 
 
 # Generate shared django secret key for session stability
