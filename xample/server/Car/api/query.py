@@ -4,12 +4,10 @@ from Car.helpers import query_car_info_by_plate
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status, permissions
+from rest_framework import status
 
 
 class QueryCarByPlate(APIView):
-    permission_classes = [permissions.IsAuthenticated, ]
-
     def get(self, request, plate_no: str, *args, **kwargs):
         try:
             car = CarInformation.objects.get(plate=plate_no)

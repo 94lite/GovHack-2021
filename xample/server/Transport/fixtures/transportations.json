@@ -1,0 +1,83 @@
+[
+  {
+    "model": "Transport.TransportationType",
+    "pk": 1,
+    "fields": {
+      "name": "Car(Petrol)",
+      "carbon_point_per_km": 192.0,
+      "speed_km_per_hour": 0.0
+    }
+  },
+  {
+    "model": "Transport.TransportationType",
+    "pk": 2,
+    "fields": {
+      "name": "Car(Diesel)",
+      "carbon_point_per_km": 171.0,
+      "speed_km_per_hour": 0.0
+    }
+  },
+  {
+    "model": "Transport.TransportationType",
+    "pk": 3,
+    "fields": {
+      "name": "Car(Hybrid)",
+      "carbon_point_per_km": 109.0,
+      "speed_km_per_hour": 0.0
+    }
+  },
+  {
+    "model": "Transport.TransportationType",
+    "pk": 4,
+    "fields": {
+      "name": "Car(EV)",
+      "carbon_point_per_km": 53.0,
+      "speed_km_per_hour": 0.0
+    }
+  },
+  {
+    "model": "Transport.TransportationType",
+    "pk": 5,
+    "fields": {
+      "name": "Bus",
+      "carbon_point_per_km": 105.0,
+      "speed_km_per_hour": 0.0
+    }
+  },
+  {
+    "model": "Transport.TransportationType",
+    "pk": 6,
+    "fields": {
+      "name": "Bike",
+      "carbon_point_per_km": 103.0,
+      "speed_km_per_hour": 0.0
+    }
+  },
+  {
+    "model": "Transport.TransportationType",
+    "pk": 7,
+    "fields": {
+      "name": "Train",
+      "carbon_point_per_km": 41.0,
+      "speed_km_per_hour": 0.0
+    }
+  },
+  {
+    "model": "Transport.TransportationType",
+    "pk": 8,
+    "fields": {
+      "name": "Ferry",
+      "carbon_point_per_km": 19.0,
+      "speed_km_per_hour": 0.0
+    }
+  },
+  {
+    "model": "Transport.TransportationType",
+    "pk": 9,
+    "fields": {
+      "name": "E-Scooter",
+      "carbon_point_per_km": 202.0,
+      "speed_km_per_hour": 0.0
+    }
+  }
+]

@@ -33,6 +33,7 @@ DEBUG = bool(os.environ.get("DJANGO_RUNTIME_LEVEL", "PRODUCTION").upper() == "DE
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
+    "flask"
 ]
 
 
@@ -49,10 +50,14 @@ INSTALLED_APPS = [
     # Libraries
     "rest_framework",
     "corsheaders",
+    "knox",
 
     # Apps
     "UserAccount.apps.UserAccountConfig",
     "Car.apps.CarConfig",
+    "Transport.apps.TransportConfig",
+    "JourneyPlan.apps.JourneyPlanConfig",
+    "Garden.apps.GardenConfig",
 ]
 
 MIDDLEWARE = [
@@ -189,3 +194,16 @@ AUTH_USER_MODEL = "UserAccount.User"
 # https://github.com/adamchainz/django-cors-headers
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+# Django Rest Framework
+# https://www.django-rest-framework.org
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        'knox.auth.TokenAuthentication',
+    ]
+}
+
