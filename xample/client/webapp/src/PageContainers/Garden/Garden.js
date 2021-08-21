@@ -4,6 +4,7 @@ import { StepBackwardOutlined } from "@ant-design/icons";
 import { FaLeaf } from "react-icons/fa";
 import Canvas from "./DisplayGarden/Canvas";
 import GardenFooter from "./Footer";
+import Charts from "./Charts";
 
 const style = {
   display: "flex",
@@ -42,7 +43,8 @@ const wrapper_style = {
   backgroundImage: `url('${process.env.PUBLIC_URL}/garden_background.png')`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: "bottom",
-  backgroundSize: "contain"
+  backgroundSize: "contain",
+  backgroundColor: "#0D4227"
 }
 
 export default function Garden() {
@@ -63,6 +65,7 @@ export default function Garden() {
           <div style={stat_style}>
             <span>Total planted trees: {2} <FaLeaf /></span>
           </div>
+          <Charts />
         </div>
       </div>
       <div style={footer_style}>

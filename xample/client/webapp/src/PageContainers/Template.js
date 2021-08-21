@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Drawer } from "antd";
 import { CloseSquareOutlined, CloseOutlined, MenuOutlined } from '@ant-design/icons';
+import { RiPlantLine } from "react-icons/ri";
 import Routes from './Routes';
 
 const header_style = {
@@ -10,7 +11,8 @@ const header_style = {
   padding: "16px",
   fontSize: "larger",
   display: "flex",
-  alignItems: "center"
+  alignItems: "center",
+  justifyContent: "space-between",
 };
 
 const body_style = {
@@ -39,6 +41,8 @@ const menu_items = [
 
 export default function Template() {
   const [menuVis, setMenuVis] = useState(false);
+  const page = useSelector((state) => state.page)
+  const bank = useSelector((state) => state.bank);
   const dispatch = useDispatch()
   
   const renderMenuItems = () => {
@@ -53,6 +57,21 @@ export default function Template() {
         </div>
       )
     });
+  }
+
+  function getHeading() {
+    switch (page) {
+      case "maps":
+        return "Journey Planner";
+      case "history":
+        return "Journey History";
+      case "garden":
+        return "Garden";
+      case "profile":
+        return "Profile"
+      default:
+        return "Profile"
+    }
   }
 
   return (
@@ -77,10 +96,15 @@ export default function Template() {
         {renderMenuItems()}
       </Drawer>
       <div style={header_style}>
-        <MenuOutlined
-          onClick={() => setMenuVis(true)}
-        />
-        <span style={{ marginLeft: "8px" }}>Hello World</span>
+        <span>
+          <MenuOutlined
+            onClick={() => setMenuVis(true)}
+          />
+          <span style={{ marginLeft: "8px" }}>
+            {getHeading()}
+          </span>
+        </span>
+        <span>{bank} <RiPlantLine style={{ marginBottom: "-2px" }} /></span>
       </div>
       <div style={body_style}>
         <Routes />
