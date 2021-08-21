@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "UserAccount.apps.UserAccountConfig",
     "Car.apps.CarConfig",
     "Transport.apps.TransportConfig",
+    "JourneyPlan.apps.JourneyPlanConfig",
 ]
 
 MIDDLEWARE = [
