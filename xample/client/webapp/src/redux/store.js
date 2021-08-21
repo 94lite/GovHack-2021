@@ -13,6 +13,19 @@ function global_state(state = INIT, action) {
         ...state,
         page: action.page
       }
+    case 'INIT_TREE_FORM':
+      return {
+        ...state,
+        garden: {}
+      }
+    case 'TREE_FORM':
+      return {
+        ...state,
+        garden: {
+          ...state.garden,
+          [action.key]: action.value
+        }
+      }
     default:
       return state
   }

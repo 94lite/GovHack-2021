@@ -5,3 +5,7 @@
   justify-content: space-evenly;
   align-items: stretch;
 }
+
+.garden-add .ant-modal-header {
+  background: #50A387;
+}

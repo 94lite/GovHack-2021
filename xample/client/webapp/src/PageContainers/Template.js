@@ -6,7 +6,7 @@ import Routes from './Routes';
 
 const header_style = {
   color: "white",
-  background: "#002766",
+  background: "#0D4227",
   padding: "16px",
   fontSize: "larger",
   display: "flex",
@@ -15,7 +15,8 @@ const header_style = {
 
 const body_style = {
   padding: "16px",
-  boxSizing: "border-box"
+  boxSizing: "border-box",
+  flexGrow: 1
 };
 
 const menu_head_style = {
@@ -55,7 +56,7 @@ export default function Template() {
   }
 
   return (
-    <div>
+    <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
       <Drawer
         title={
           <span style={menu_head_style}>
