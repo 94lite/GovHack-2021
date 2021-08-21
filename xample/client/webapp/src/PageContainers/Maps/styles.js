@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 const MapsPage = styled.div`
     background-color: #D3D3D0;
-    width: 50%;
 `;
 
 const StyledSearch = styled(Input.Search)`
