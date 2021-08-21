@@ -3,6 +3,8 @@ from django.contrib.auth.admin import UserAdmin
 
 from .models import User
 
+from Car.admin import CarOwnershipInline
+
 
 @admin.register(User)
 class UserAccountAdmin(UserAdmin):
@@ -10,3 +12,4 @@ class UserAccountAdmin(UserAdmin):
     ordering = ("uuid", )
     fieldsets = UserAdmin.fieldsets + (("User Account fields", {"fields": ("uuid", )}),)
     readonly_fields = ("uuid", )
+    inlines = (CarOwnershipInline, )
