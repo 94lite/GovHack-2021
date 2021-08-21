@@ -12,6 +12,7 @@ export default function Routes() {
   // const [page, setPage] = useState("profile");
   const page = useSelector((state) => state.page);
   const setGlobalPage = useDispatch()
+  const selectedCar = useSelector(state => state.profile.selectedCar);
 
   function setPage(location) {
     setGlobalPage({

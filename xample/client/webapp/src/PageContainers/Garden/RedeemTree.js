@@ -10,7 +10,7 @@ const tree_types = [
     description: "Spruces are large trees, from about 20–60m tall when mature, and have whorled branches and conical form.",
     maturity_rate: "x years",
     background: process.env.PUBLIC_URL + "/spruce.jpg",
-    icon: <GiPineTree />,
+    icon: <GiPineTree style={{ marginBottom: "-2px" }} />,
     pts: 400,
   },
   {
@@ -19,7 +19,7 @@ const tree_types = [
     description: "New Zealand ferns New Zealand has an unusually high number of fern species for a temperate country and about 40 per cent of these species occur nowhere else in the world.",
     maturity_rate: "x years",
     background: process.env.PUBLIC_URL + "/fern.png",
-    icon: <GiFern />,
+    icon: <GiFern style={{ marginBottom: "-2px" }} />,
     pts: 600,
   },
   {
@@ -28,7 +28,7 @@ const tree_types = [
     description: "The cabbage tree is one of the most distinctive trees in the New Zealand landscape, especially on farms. They grow all over the country, but prefer wet, open areas like swamps.",
     maturity_rate: "x years",
     background: process.env.PUBLIC_URL + "/cabbage_tree.png",
-    icon: <GiPalmTree />,
+    icon: <GiPalmTree style={{ marginBottom: "-2px" }} />,
     pts: 700,
   },
   {
@@ -37,7 +37,7 @@ const tree_types = [
     description: "Pōhutukawa is New Zealand's Christmas tree, and holds a prominent place in Maori mythology.",
     maturity_rate: "x years",
     background: process.env.PUBLIC_URL + "/pohutukawa.jpeg",
-    icon: <GiFruitTree />,
+    icon: <GiFruitTree style={{ marginBottom: "-2px" }} />,
     pts: 1000
   },
   {
@@ -46,7 +46,7 @@ const tree_types = [
     description: "Kauri are among the world's mightiest trees, growing to over 50m tall, with trunk girths up to 16m, and living for over 2,000 years.",
     maturity_rate: "x years",
     background: process.env.PUBLIC_URL + "/kauri.png",
-    icon: <GiTreeDoor />,
+    icon: <GiTreeDoor style={{ marginBottom: "-2px" }} />,
     pts: 10000,
   }
 ]
@@ -76,8 +76,9 @@ const footer_style = {
 export default function RedeemTree(props) {
   const [tree_i, focusTree] = useState(0);
   const [page, setPage] = useState("select");
+  const bank = useSelector((state) => state.bank);
   const newTreeForm = useSelector((state) => state.garden);
-  const setGlobalTree = useDispatch();
+  const setGlobal = useDispatch();
   const {
     name,
     genus,
@@ -89,7 +90,7 @@ export default function RedeemTree(props) {
   } = tree_types[tree_i]
 
   useEffect(() => {
-    setGlobalTree({ type: "INIT_TREE_FORM" });
+    setGlobal({ type: "INIT_TREE_FORM" });
   }, []);
 
   function swapPage() {
@@ -102,6 +103,7 @@ export default function RedeemTree(props) {
           type: name,
           ...newTreeForm,
         });
+        setGlobal({ type: "SPEND", amount: pts })
         props.setModVis(false);
         break;
       default:
@@ -129,7 +131,6 @@ export default function RedeemTree(props) {
               </div>
             }
             size="small"
-            style={{ marginTop: "8px" }}
           >
             <p style={p_style}><u>Genus:</u> <i>{genus}</i></p>
             <p style={p_style}><u>Description:</u> {description}</p>
@@ -143,14 +144,14 @@ export default function RedeemTree(props) {
             addonBefore="Name"
             style={{ marginTop: "4px" }}
             value={newTreeForm.name}
-            onChange={event => setGlobalTree({ type: "TREE_FORM", key: "name", value: event.target.value })}
+            onChange={event => setGlobal({ type: "TREE_FORM", key: "name", value: event.target.value })}
           />
           <Input.TextArea
             autoSize={{ minRows: 3, maxRows: 3 }}
             placeholder="Personal Note"
             style={{ marginTop: "4px" }}
             value={newTreeForm.note}
-            onChange={event => setGlobalTree({ type: "TREE_FORM", key: "note", value: event.target.value })}
+            onChange={event => setGlobal({ type: "TREE_FORM", key: "note", value: event.target.value })}
           />
         </div>
       )}
@@ -159,7 +160,10 @@ export default function RedeemTree(props) {
         <Button
           type="primary"
           onClick={() => swapPage()}
-          disabled={page === "form" && newTreeForm.name === undefined}
+          disabled={
+            (page === "form" && newTreeForm.name === undefined)
+            || (page === "select" && bank < pts)
+          }
           style={{ background: "#50A387", borderColor: "#50A387" }}
         >
           {page === "select" ? "Next" : "Redeem"}

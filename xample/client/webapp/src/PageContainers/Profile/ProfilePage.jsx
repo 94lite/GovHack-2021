@@ -13,15 +13,6 @@ const ProfilePage = () => {
             page: 'register'
         });
     }
-
-    useEffect(() => {
-        if (selectedCar == null) {
-            dispatch({
-                type: "SWAP_PAGE",
-                page: "register"
-            })
-        }
-    }, [dispatch, selectedCar])
     
     const onRemoveCar = () => {
         dispatch({

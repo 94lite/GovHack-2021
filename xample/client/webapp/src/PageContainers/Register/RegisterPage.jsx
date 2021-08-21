@@ -32,11 +32,6 @@ const RegisterPage = () => {
             key: 'selectedCar',
             value: car
         });
-
-        dispatch({
-            type: "SWAP_PAGE",
-            page: "profile"
-        });
     }
 
     useEffect(() => {
