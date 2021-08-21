@@ -7,12 +7,14 @@ export default function GardenFooter() {
   return (
     <div>
       <Modal
+        className="garden-add"
         visible={modVis}
         onCancel={() => setModVis(false)}
         centered
         title="Redeem Tree"
         footer={null}
         destroyOnClose
+        bodyStyle={{ background: "#0D4227" }}
       >
         <RedeemTree
           setModVis={setModVis}
@@ -22,6 +24,7 @@ export default function GardenFooter() {
         type="primary"
         block
         onClick={() => setModVis(true)}
+        style={{ background: "#50A387", borderColor: "#50A387" }}
       >
         Add Tree
       </Button>
