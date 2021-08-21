@@ -22,4 +22,5 @@ urlpatterns = [
     path("health/", lambda r: HttpResponse(status=204)),
     path("car/", include("Car.urls")),
     path("api/transportation/", include("Transport.urls")),
+    path("api/journey/", include("JourneyPlan.urls")),
 ]
