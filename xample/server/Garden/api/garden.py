@@ -10,7 +10,7 @@ class MyGarden(APIView):
     permission_classes = [permissions.IsAuthenticated, ]
 
     def get(self, request, *args, **kwargs):
-        trees = UserTree.objects.filter(user=request.user)
+        trees = UserTree.objects.filter(planted_by=request.user)
         serializer = UserTreeSerializer(trees, many=True)
 
         return Response(serializer.data, status=status.HTTP_200_OK)
