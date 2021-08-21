@@ -1,11 +1,15 @@
 import Search from "antd/lib/input/Search";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { searchCar } from "../../apis/apis";
 import CarCard from "./components/CarCard";
 
 const RegisterPage = () => {
     const [car, setCar] = useState(null);
-    const [isCarVisible, setIsCarVisible] = useState(false);
+    const [isCarModalVisible, setIsCarModalVisible] = useState(false);
+
+    const selectedCar = useSelector(state => state.profile.selectedCar);
+    const dispatch = useDispatch();
 
     const onSearch = (value) => {
         console.log(`Registering plate number=[${value}]`);
@@ -19,14 +23,33 @@ const RegisterPage = () => {
     }
 
     const onModalCancel = () => {
-        setIsCarVisible(false);
+        setIsCarModalVisible(false);
+    }
+
+    const onModalOk = () => {
+        dispatch({
+            type: "SET_PROFILE",
+            key: 'selectedCar',
+            value: car
+        });
+
+        dispatch({
+            type: "SWAP_PAGE",
+            page: "profile"
+        });
     }
 
     useEffect(() => {
         if (car) {
-            setIsCarVisible(true);
+            setIsCarModalVisible(true);
         }
     }, [car])
+
+    useEffect(() => {
+        if (selectedCar) {
+            setIsCarModalVisible(false);
+        }
+    }, [selectedCar])
 
     return (
         <>
@@ -50,8 +73,8 @@ const RegisterPage = () => {
                 <Search placeholder="e.g. VEH338" onSearch={onSearch} enterButton />
             </div>
             {car && (
-                <div style={{padding: 10}}>
-                    <CarCard car={car} isVisible={isCarVisible} onCancel={onModalCancel} />
+                <div style={{ padding: 10 }}>
+                    <CarCard car={car} isVisible={isCarModalVisible} onCancel={onModalCancel} onOk={onModalOk} />
                 </div>
             )}
         </>

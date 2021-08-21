@@ -3,7 +3,10 @@ import { createStore, compose } from 'redux'
 const INIT = {
   page: "profile",
   maps: {},
-  garden: {}
+  garden: {},
+  profile: {
+    selectedCar: null
+  }
 }
 
 function global_state(state = INIT, action) {
@@ -24,6 +27,22 @@ function global_state(state = INIT, action) {
         garden: {
           ...state.garden,
           [action.key]: action.value
+        }
+      }
+    case 'SET_PROFILE':
+      return {
+        ...state,
+        profile: {
+          ...state.profile,
+          [action.key]: action.value
+        }
+      }
+    case 'REMOVE_CAR':
+      return {
+        ...state,
+        profile: {
+          ...state.profile,
+          selectedCar: null
         }
       }
     default:
