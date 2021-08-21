@@ -9,11 +9,14 @@ export default function GardenFooter() {
       <Modal
         visible={modVis}
         onCancel={() => setModVis(false)}
-        okText="Redeem"
         centered
         title="Redeem Tree"
+        footer={null}
+        destroyOnClose
       >
-        <RedeemTree />
+        <RedeemTree
+          setModVis={setModVis}
+        />
       </Modal>
       <Button
         type="primary"
