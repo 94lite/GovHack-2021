@@ -1,16 +1,20 @@
 import { Provider } from 'react-redux'
 import './App.css'
 import 'antd/dist/antd.css';
+import { store } from './redux/store'
+
 import Template from './PageContainers/Template';
+
 import DisplayTime from './DisplayTime';
 import LongWork from './LongWork';
 
 function App() {
   return (
     <div>
-      <header className="App-header" />
-      <Template />
-      {/* <DisplayTime /><LongWork /> */}
+      <Provider store={store}>
+        <Template />
+        {/* <DisplayTime /><LongWork /> */}
+      </Provider>
     </div>
   );
 }

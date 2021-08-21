@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux'
 import { Drawer } from "antd";
 import { CloseSquareOutlined, CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import Routes from './Routes';
@@ -29,23 +30,24 @@ const menu_item_style = {
 };
 
 const menu_items = [
-  ["Journey Planner", <CloseSquareOutlined />],
-  ["Garden", <CloseSquareOutlined />]
+  ["Journey Planner", "maps", <CloseSquareOutlined />],
+  ["Garden", "garden", <CloseSquareOutlined />],
+  ["Profile", 'profile', <CloseSquareOutlined />]
 ]
 
 export default function Template() {
   const [menuVis, setMenuVis] = useState(false);
-
+  const dispatch = useDispatch()
+  
   const renderMenuItems = () => {
     return menu_items.map(item => {
-
       return (
         <div
           key={item[0]}
-          onClick={() => console.log(item[0])}
+          onClick={() => dispatch({ type: "SWAP_PAGE", page: item[1] })}
           style={menu_item_style}
         >
-          {item[1]}<span style={{ marginLeft: "8px" }}>{item[0]}</span>
+          {item[2]}<span style={{ marginLeft: "8px" }}>{item[0]}</span>
         </div>
       )
     });
