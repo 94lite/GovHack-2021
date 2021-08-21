@@ -11,7 +11,7 @@ class CarInformation(models.Model):
 
     model = models.CharField(max_length=128)
     manufactured_year = models.CharField(max_length=8)
-    fuel_type = models.CharField(max_length=32, unique=True, db_index=True)
+    fuel_type = models.CharField(max_length=32, db_index=True)
 
     carbon_emission_rate = models.IntegerField(validators=[MinValueValidator(-1), MaxValueValidator(6), ])
     fuel_economy_rate = models.IntegerField(validators=[MinValueValidator(-1), MaxValueValidator(6), ])
