@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import { useEffect, useState } from 'react';
 import JourneyOptionList from './components/JourneyOptionList';
 import { GoogleMapContainer, MapsPage as StyledMapsPage, StyledSearch } from "./styles";
+import { getTransportation } from '../../apis/apis';
 
 const journeys = [
     {
@@ -54,9 +55,12 @@ const MapsPage = () => {
 
     useEffect(() => {
         if (searchDestination) {
-            setJourneyOptions(journeys);
-            setSelectedJourneyOption(null);
             setJourneyMapPoints([]);
+            setSelectedJourneyOption(null);
+            (async function (){
+                const options = await getTransportation();
+                setJourneyOptions(options);
+            })();
         }
     }, [searchDestination]);
 
