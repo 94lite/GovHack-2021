@@ -39,15 +39,15 @@ const journeys = [
 
 const MapsPage = () => {
     const [searchDestination, setSearchDestination] = useState(null);
-    
+
     const [journeyOptions, setJourneyOptions] = useState([]);
     const [selectedJourneyOption, setSelectedJourneyOption] = useState(null);
     const [journeyMapPoints, setJourneyMapPoints] = useState([]);
 
     const defaultProps = {
         center: {
-            lat: 10.99835602,
-            lng: 77.01502627
+            lat: -36.818840,
+            lng: 174.732529
         },
         zoom: 11
     };
@@ -65,7 +65,7 @@ const MapsPage = () => {
             setJourneyMapPoints([1])
         }
     }, [selectedJourneyOption])
-    
+
     const onSearch = (value) => {
         console.log(`Searching destination=[${value}]`);
         setSearchDestination(value);
@@ -75,6 +75,23 @@ const MapsPage = () => {
         console.log(`User clicked journey option with props=[${JSON.stringify(option)}]`)
         // Call API to get search results
         setSelectedJourneyOption(option);
+    }
+
+    const handleApiLoaded = (map, maps) => {
+        const directionsService = new maps.DirectionsService();
+        const directionsDisplay = new maps.DirectionsRenderer();
+        directionsService.route({
+            origin: '25 Palmerston Road, Auckland',
+            destination: searchDestination,
+            travelMode: 'DRIVING'
+        }, (response, status) => {
+            if (status === 'OK') {
+                directionsDisplay.setDirections(response);
+                directionsDisplay.setMap(map);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
     }
 
     return (
@@ -93,9 +110,13 @@ const MapsPage = () => {
             {selectedJourneyOption && (
                 <GoogleMapContainer>
                     <GoogleMapReact
-                        bootstrapURLKeys={{ key: "" }}
+                        bootstrapURLKeys={{ key: "AIzaSyBy8azrhY9H5wtrRzBA2PTF4-wvGsTc4Xo" }}
                         defaultCenter={defaultProps.center}
-                        defaultZoom={defaultProps.zoom} />
+                        defaultZoom={defaultProps.zoom}
+                        yesIWantToUseGoogleMapApiInternals
+                        onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
+                    >
+                    </GoogleMapReact>
                 </GoogleMapContainer>)
             }
         </StyledMapsPage>
