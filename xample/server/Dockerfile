@@ -7,7 +7,7 @@ ENV PYTHONUNBUFFERED 1
 
 # Copy Requirements file and install
 COPY requirements.txt /requirements.txt
-RUN python -m pip install -r requirements.txt
+RUN python -m pip install -r requirements.txt && python -m pip install gevent && python -m pip install gunicorn && python -m pip install psycopg2-binary
 
 # Create work directory and copy project files
 RUN mkdir -p /app

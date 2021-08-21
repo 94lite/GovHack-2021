@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
 import { Button } from "antd";
 import MapsPage from './Maps/MapsPage';
 
 // Page options: "profile" (default), "maps", "garden"
 
 export default function Routes() {
-  const [page, setPage] = useState("profile");
+  // const [page, setPage] = useState("profile");
+  const page = useSelector((state) => state.page);
+  const setGlobalPage = useDispatch()
+
+  function setPage(location) {
+    setGlobalPage({
+      type: "SWAP_PAGE",
+      page: location
+    });
+  }
 
   switch (page) {
     case "maps":
