@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "antd";
+import MapsPage from './Maps/MapsPage';
 
 // Page options: "profile" (default), "maps", "garden"
 
@@ -9,9 +10,7 @@ export default function Routes() {
   switch (page) {
     case "maps":
       return (
-        <div>
-          Maps
-        </div>
+        <MapsPage />
       )
     case "garden":
       return (
