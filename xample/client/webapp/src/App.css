@@ -9,6 +9,9 @@
 .garden-add .ant-modal-header {
   background: #50A387;
 }
+.tree-profile .ant-modal-header {
+  background: #50A387;
+}
 
 .garden-charts .ant-tabs-nav {
   margin: 0 !important;

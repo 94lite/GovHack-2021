@@ -54,16 +54,16 @@ export default function Garden() {
         <div>
           <div style={{ display: "flex", justifyContent: "space-between", color: "white" }}>
             <h3 style={{ color: "white" }}>Today</h3>
-            <h3 style={{ color: "white" }}>1 <FaLeaf /></h3>
+            <h3 style={{ color: "white" }}>4 <FaLeaf /></h3>
           </div>
           <Canvas />
         </div>
         <div style={body_style}>
           <div style={stat_style}>
-            <span>Total number of trees: {4} <FaLeaf /></span>
+            <span>Total number of trees: {8} <FaLeaf /></span>
           </div>
           <div style={stat_style}>
-            <span>Total planted trees: {2} <FaLeaf /></span>
+            <span>Total planted trees: {6} <FaLeaf /></span>
           </div>
           <Charts />
         </div>

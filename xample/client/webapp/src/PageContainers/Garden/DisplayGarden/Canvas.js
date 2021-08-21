@@ -26,36 +26,38 @@ export default function Canvas() {
   return (
     <div style={style}>
       <Modal
+        className="tree-profile"
         visible={focus !== undefined}
         footer={null}
         onCancel={() => setFocus(undefined)}
         title={focus}
+        bodyStyle={{ background: "#0D4227" }}
       >
         <TreeInfo />
       </Modal>
       <GiTreeDoor
         style={getStyle(10, 10)}
-        onClick={() => setFocus("what")}
+        onClick={() => setFocus("My Tree")}
       />
       <GiFruitTree 
         style={getStyle(12, 15)}
-        onClick={() => setFocus("what")}
+        onClick={() => setFocus("Apple")}
       />
       <GiFruitTree 
         style={getStyle(18, 5)}
-        onClick={() => setFocus("what")}
+        onClick={() => setFocus("Plum")}
       />
       <GiFruitTree 
         style={getStyle(18, 0)}
-        onClick={() => setFocus("what")}
+        onClick={() => setFocus("Berry")}
       />
       <GiFruitTree 
         style={getStyle(15, 6)}
-        onClick={() => setFocus("what")}
+        onClick={() => setFocus("OJ")}
       />
       <GiPalmTree 
         style={getStyle(0, 14)}
-        onClick={() => setFocus("what")}
+        onClick={() => setFocus("Lemon")}
       />
       <GiPalmTree 
         style={getStyle(-3, 17)}
