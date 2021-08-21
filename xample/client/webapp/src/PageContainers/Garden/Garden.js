@@ -22,8 +22,7 @@ const stat_style = {
 }
 
 const body_style = {
-  marginTop: "8px",
-  marginBottom: "64px"
+  marginTop: "8px"
 }
 
 const footer_style = {

@@ -41,7 +41,69 @@ const INIT = {
       planted: 4,
       color: "#73d13d"
     }
-  ]
+  ],
+  company_data: [
+    {
+      month: "Jan",
+      planted: 2000,
+      color: "#50A387"
+    },
+    {
+      month: "Feb",
+      planted: 2000,
+      color: "#50A387"
+    },
+    {
+      month: "Mar",
+      planted: 2000,
+      color: "#50A387"
+    },
+    {
+      month: "Apr",
+      planted: 2000,
+      color: "#50A387"
+    },
+    {
+      month: "May",
+      planted: 6000,
+      color: "#50A387"
+    },
+    {
+      month: "Jun",
+      planted: 13000,
+      color: "#50A387"
+    },
+    {
+      month: "Jul",
+      planted: 14440,
+      color: "#50A387"
+    },
+    {
+      month: "Aug",
+      planted: 21528,
+      color: "#50A387"
+    },
+    {
+      month: "Sep",
+      planted: 30791,
+      color: "#50A387"
+    },
+    {
+      month: "Oct",
+      planted: 39885,
+      color: "#50A387"
+    },
+    {
+      month: "Nov",
+      planted: 48768,
+      color: "#50A387"
+    },
+    {
+      month: "Dec",
+      planted: 63000,
+      color: "#73d13d"
+    }
+  ],
 }
 
 function global_state(state = INIT, action) {
