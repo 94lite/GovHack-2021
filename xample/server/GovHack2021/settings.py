@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "Car.apps.CarConfig",
     "Transport.apps.TransportConfig",
     "JourneyPlan.apps.JourneyPlanConfig",
+    "Garden.apps.GardenConfig",
 ]
 
 MIDDLEWARE = [
