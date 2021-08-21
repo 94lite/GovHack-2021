@@ -31,6 +31,7 @@ const menu_item_style = {
 
 const menu_items = [
   ["Journey Planner", "maps", <CloseSquareOutlined />],
+  ["Journey History", "history", <CloseSquareOutlined />],
   ["Garden", "garden", <CloseSquareOutlined />],
   ["Profile", 'profile', <CloseSquareOutlined />]
 ]

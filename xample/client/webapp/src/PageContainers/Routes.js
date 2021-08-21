@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
+import Garden from './Garden/Garden';
 import { Button } from "antd";
 
 // Page options: "profile" (default), "maps", "garden"
@@ -23,12 +24,14 @@ export default function Routes() {
           Maps
         </div>
       )
-    case "garden":
+    case "history":
       return (
         <div>
-          Garden
+          Journey History
         </div>
       )
+    case "garden":
+      return <Garden />
     case "profile":
     default:
       return (
