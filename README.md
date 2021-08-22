@@ -35,6 +35,8 @@ when the terminal returns
 
 run: <code>npm run start</code>
 
+(this will take a short while as well)
+
 #### 3. Create the images and run
 From a <b>new</b> terminal
 
