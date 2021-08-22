@@ -38,7 +38,7 @@ const footer_style = {
 const wrapper_style = {
   height: "100%",
   margin: "0 -16px",
-  padding: "32px",
+  padding: "8px 32px",
   backgroundImage: `url('${process.env.PUBLIC_URL}/garden_background.png')`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: "bottom",
