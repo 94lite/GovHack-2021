@@ -1,7 +1,7 @@
 # GovHack-2021
 
 
-## First Time:
+## Installing the Application (First Time):
 
 #### PREREQUISITES:
 Applications required:
