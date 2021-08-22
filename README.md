@@ -29,6 +29,10 @@ change directory into xample/client/webapp (you should be able to successfully r
 
 run: <code>npm install</code>
 
+(this will take a short while)
+
+when the terminal returns
+
 run: <code>npm run watch</code>
 
 #### 3. Create the images and run
