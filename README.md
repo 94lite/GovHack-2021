@@ -48,7 +48,7 @@ On Chrome, direct to http://localhost:3000
 
 You need to view this in mobile mode
 
-Follow this top open in mobile mode: https://www.browserstack.com/guide/view-mobile-version-of-website-on-chrome
+Follow this to open in mobile mode: https://www.browserstack.com/guide/view-mobile-version-of-website-on-chrome
 
 ## How to Stop:
 run: <code>docker-compose down</code>
