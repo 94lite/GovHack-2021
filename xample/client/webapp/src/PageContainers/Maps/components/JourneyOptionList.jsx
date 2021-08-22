@@ -1,6 +1,6 @@
 import { Card, Col, Row } from "antd";
 import Title from "antd/lib/typography/Title";
-
+import moment from "moment";
 const JourneyOptionList = ({ journeys, onOptionClick }) => {
     return (
         <div>
@@ -28,10 +28,10 @@ const getJourneyCard = (journey, onOptionClick) => {
                         </div>
                     </Col>
                     <Col span={12}>
-                        <b>Leave at {new Date().getTime()}</b>
+                        <b>Leave at {moment().format('h:mm:ss a')}</b>
                     </Col>
                     <Col span={12} style={{ textAlign: "right" }}>
-                        Arrive by {new Date().getTime() + 10}
+                        Arrive by {moment().add(1, 'hours').format('h:mm:ss a')}
                     </Col>
                 </Row>
             </Card>

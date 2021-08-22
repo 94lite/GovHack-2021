@@ -2,15 +2,15 @@ import {Input} from 'antd';
 import styled from "styled-components"
 
 const MapsPage = styled.div`
-    background-color: #D3D3D0;
+    background-color: #2E374A;
 `;
 
 const StyledSearch = styled(Input.Search)`
-    padding: 1em
+padding: 1em;
 `;
 
 const GoogleMapContainer = styled.div`
-    height: 30vh;
+    height: 90vh;
     width: 100%;
 `
 

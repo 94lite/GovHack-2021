@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { Drawer } from "antd";
+import { Drawer, Image } from "antd";
 import { CloseSquareOutlined, CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import { RiPlantLine, RiHistoryFill, RiPlantFill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
@@ -9,7 +9,7 @@ import Routes from './Routes';
 
 const header_style = {
   color: "white",
-  background: "#0D4227",
+  background: "#2E374A",
   padding: "16px",
   fontSize: "larger",
   display: "flex",
@@ -18,19 +18,19 @@ const header_style = {
 };
 
 const body_style = {
-  padding: "16px",
   boxSizing: "border-box",
   flexGrow: 1
 };
 
 const menu_head_style = {
   color: "white",
-  fontSize: "larger"
+  fontSize: "larger",
+
 };
 
 const menu_item_style = {
-  padding: "8px 16px",
-  borderBottom: "2px solid black",
+  padding: "16px 16px 16px",
+  borderBottom: "2px solid #172137",
   fontSize: "larger"
 };
 
@@ -73,7 +73,7 @@ export default function Template() {
         return "Profile"
       default:
         return "Profile"
-    }
+    }    
   }
 
   return (
@@ -81,7 +81,7 @@ export default function Template() {
       <Drawer
         title={
           <span style={menu_head_style}>
-            Noah's Ark
+          🌳 CO Tree
           </span>
         }
         placement="left"
@@ -92,8 +92,8 @@ export default function Template() {
           padding: "0",
           color: "white"
         }}
-        headerStyle={{ background: "#002766" }}
-        drawerStyle={{ background: "#002766" }}
+        headerStyle={{ background: "#2E374A", borderBottom: "1px solid #172137" }}
+        drawerStyle={{ background: "#2E374A" }}
       >
         {renderMenuItems()}
       </Drawer>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import Garden from './Garden/Garden';
-import { Button } from "antd";
+import { Button, Image } from "antd";
 import MapsPage from './Maps/MapsPage';
 import ProfilePage from './Profile/ProfilePage';
 import RegisterPage from './Register/RegisterPage';
@@ -28,8 +28,8 @@ export default function Routes() {
       )
     case "history":
       return (
-        <div>
-          Journey History
+        <div style={{padding: '16px'}}>
+          <Image src="/trip-history.png" preview={false} />
         </div>
       )
     case "garden":

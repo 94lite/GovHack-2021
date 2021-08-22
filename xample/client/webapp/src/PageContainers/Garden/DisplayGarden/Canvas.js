@@ -8,7 +8,7 @@ const style = {
   backgroundImage: `url('${process.env.PUBLIC_URL}/ForestDraft.png')`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: "center center",
-  backgroundSize: "contain"
+  backgroundSize: "contain",
 };
 
 function getStyle(x, y) {
@@ -26,7 +26,7 @@ export default function Canvas() {
   return (
     <div style={style}>
       <Modal
-        className="tree-profile"
+        className="tree-profile canvas-tree-modal"
         visible={focus !== undefined}
         footer={null}
         onCancel={() => setFocus(undefined)}

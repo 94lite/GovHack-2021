@@ -1,6 +1,5 @@
 import { Provider } from 'react-redux'
-import './App.css'
-import 'antd/dist/antd.css';
+import './App.less'
 import { store } from './redux/store'
 
 import Template from './PageContainers/Template';

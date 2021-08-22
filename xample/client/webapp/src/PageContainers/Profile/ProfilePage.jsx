@@ -33,14 +33,14 @@ const ProfilePage = () => {
                     </Button>
                 </div>
             </div>
-        ) : <>
+        ) : <div style={{padding: '16px'}}>
             <b>
                 {selectedCar.model} ({selectedCar.manufactured_year})
             </b>
             <CarDetails car={selectedCar} />
             <br />
             <Button type="primary" onClick={onRemoveCar}>Remove car</Button>
-        </>
+        </div>
     )
 }
 

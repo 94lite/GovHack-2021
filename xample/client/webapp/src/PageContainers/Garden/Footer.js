@@ -7,7 +7,7 @@ export default function GardenFooter() {
   return (
     <div>
       <Modal
-        className="garden-add"
+        className="garden-add garden-modal"
         visible={modVis}
         onCancel={() => setModVis(false)}
         centered

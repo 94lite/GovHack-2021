@@ -16,13 +16,13 @@ const MapsPage = () => {
             lat: -36.818840,
             lng: 174.732529
         },
-        zoom: 11
+        zoom: 30
     };
 
     useEffect(() => {
         if (searchDestination) {
             setSelectedJourneyOption(null);
-            (async function (){
+            (async function () {
                 const options = await getTransportation();
                 setJourneyOptions(options);
             })();
@@ -66,9 +66,19 @@ const MapsPage = () => {
                 enterButton
                 onSearch={onSearch} />
 
-            {selectedJourneyOption == null && journeyOptions.length > 0 &&
-                <JourneyOptionList journeys={journeyOptions} onOptionClick={onJourneyOptionClick} />
-            }
+            { }
+            {journeyOptions.length <= 0 && (
+                 <GoogleMapContainer>
+                 <GoogleMapReact
+                     bootstrapURLKeys={{ key: GOOGLE_MAP_API_KEY }}
+                     defaultCenter={defaultProps.center}
+                     defaultZoom={12}
+                 >
+                 </GoogleMapReact>
+             </GoogleMapContainer>)}
+
+            {selectedJourneyOption == null && journeyOptions.length > 0
+                        && <JourneyOptionList journeys={journeyOptions} onOptionClick={onJourneyOptionClick} />}
 
             {selectedJourneyOption && (
                 <GoogleMapContainer>

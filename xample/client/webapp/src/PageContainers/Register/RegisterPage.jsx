@@ -47,8 +47,8 @@ const RegisterPage = () => {
     }, [selectedCar])
 
     return (
-        <>
-            <div style={{ marginTop: '10vh', marginBottom: '10vh' }}>
+        <div style={{padding: '16px'}}>
+            <div style={{ padding: '0 5vw', textAlign: 'center', margin: '5vh 0'}}>
                 <h2>
                     <b>How much C02 does your vehicle produce?</b>
                 </h2>
@@ -72,7 +72,7 @@ const RegisterPage = () => {
                     <CarCard car={car} isVisible={isCarModalVisible} onCancel={onModalCancel} onOk={onModalOk} />
                 </div>
             )}
-        </>
+        </div>
     )
 }
 
