@@ -81,7 +81,7 @@ export default function Template() {
       <Drawer
         title={
           <span style={menu_head_style}>
-          🌳 CO Tree
+          <Image src="/logo.png" width={32} style={{margin: '0px 0px -8px -16px'}}/> <span style={{marginLeft: '-18px'}}><b>CO</b>tree</span>
           </span>
         }
         placement="left"
