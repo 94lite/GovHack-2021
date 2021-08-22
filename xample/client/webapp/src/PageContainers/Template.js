@@ -10,7 +10,7 @@ import Routes from './Routes';
 const header_style = {
   color: "white",
   background: "#0D4227",
-  padding: "16px",
+  padding: "24px",
   fontSize: "larger",
   display: "flex",
   alignItems: "center",
@@ -29,7 +29,7 @@ const menu_head_style = {
 };
 
 const menu_item_style = {
-  padding: "8px 16px",
+  padding: "16px 16px 16px",
   borderBottom: "2px solid black",
   fontSize: "larger"
 };
