@@ -25,3 +25,15 @@ export const searchCar = async(carPlate) => {
 }
 
 export const GOOGLE_MAP_API_KEY = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
+
+const GET_INDUSTRY = BASE_URL + "garden/industry/"
+
+export const getIndustryUsage = async() => {
+    try {
+        const response = await axios.get(GET_INDUSTRY);
+        return response.data;
+    } catch (err) {
+        console.error(`getIndustryUsage threw error=[${err}]`);
+        return null;
+    }
+}
