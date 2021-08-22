@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Drawer } from "antd";
 import { CloseSquareOutlined, CloseOutlined, MenuOutlined } from '@ant-design/icons';
-import { RiPlantLine } from "react-icons/ri";
+import { RiPlantLine, RiHistoryFill } from "react-icons/ri";
+import { CgProfile } from "react-icons/cg";
+import { GiPathDistance } from "react-icons/gi";
 import Routes from './Routes';
 
 const header_style = {
@@ -33,10 +35,10 @@ const menu_item_style = {
 };
 
 const menu_items = [
-  ["Journey Planner", "maps", <CloseSquareOutlined />],
-  ["Journey History", "history", <CloseSquareOutlined />],
-  ["Garden", "garden", <CloseSquareOutlined />],
-  ["Profile", 'profile', <CloseSquareOutlined />]
+  ["Journey Planner", "maps", <GiPathDistance />],
+  ["Journey History", "history", <RiHistoryFill />],
+  ["Garden", "garden", <RiPlantFill />],
+  ["Profile", 'profile', <CgProfile />]
 ]
 
 export default function Template() {
