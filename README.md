@@ -43,6 +43,8 @@ From a <b>new</b> terminal
 
 run: <code>docker-compose up --build</code>
 
+(This will take a while) Wait a moment before proceeding to the next step
+
 #### 4. Open application
 On Chrome, direct to http://localhost:3000
 
