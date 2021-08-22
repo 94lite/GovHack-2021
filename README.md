@@ -33,7 +33,7 @@ run: <code>npm install</code>
 
 when the terminal returns
 
-run: <code>npm run watch</code>
+run: <code>npm run start</code>
 
 #### 3. Create the images and run
 From a <b>new</b> terminal
@@ -41,7 +41,7 @@ From a <b>new</b> terminal
 run: <code>docker-compose up --build</code>
 
 #### 4. Open application
-On a browser, direct to http://127.0.0.1:8080
+On a browser, direct to http://localhost:3000
 
 
 ## How to Stop:
