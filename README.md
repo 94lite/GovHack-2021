@@ -13,7 +13,7 @@ Applications required:
 #### 0. Getting the Resources
 Clone this git repository
 
-Make sure that the branch is pointed at 'example-app'
+Make sure that the branch is pointed at 'main'
 
 #### 1. Create the additional folders
 Open Terminal
