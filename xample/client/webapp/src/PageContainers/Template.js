@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Drawer } from "antd";
 import { CloseSquareOutlined, CloseOutlined, MenuOutlined } from '@ant-design/icons';
-import { RiPlantLine, RiHistoryFill } from "react-icons/ri";
+import { RiPlantLine, RiHistoryFill, RiPlantFill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { GiPathDistance } from "react-icons/gi";
 import Routes from './Routes';
