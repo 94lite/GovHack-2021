@@ -1,3 +1,7 @@
+.ant-card {
+  background: #f6ffed !important;
+}
+
 .app-profile {
   height: calc(100vh - 32px);
   display: flex;
