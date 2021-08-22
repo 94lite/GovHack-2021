@@ -9,6 +9,7 @@ Applications required:
 - NPM
 - Git
 - Terminal
+- Google Chrome
 
 #### 0. Getting the Resources
 Clone this git repository
@@ -43,8 +44,11 @@ From a <b>new</b> terminal
 run: <code>docker-compose up --build</code>
 
 #### 4. Open application
-On a browser, direct to http://localhost:3000
+On Chrome, direct to http://localhost:3000
 
+You need to view this in mobile mode
+
+Follow this top open in mobile mode: https://www.browserstack.com/guide/view-mobile-version-of-website-on-chrome
 
 ## How to Stop:
 run: <code>docker-compose down</code>
