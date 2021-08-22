@@ -34,6 +34,12 @@ run: <code>npm install</code>
 
 when the terminal returns
 
+run: <code>npm run build</code>
+
+(this will take a short while)
+
+when the terminal returns
+
 run: <code>npm run start</code>
 
 (this will take a short while as well)
