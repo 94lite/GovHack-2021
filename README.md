@@ -50,6 +50,8 @@ You need to view this in mobile mode
 
 (Follow this to open in mobile mode: https://www.browserstack.com/guide/view-mobile-version-of-website-on-chrome)
 
+Change the view to "iPhone X"
+
 ## How to Stop:
 run: <code>docker-compose down</code>
 
