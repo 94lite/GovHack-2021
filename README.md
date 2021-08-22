@@ -18,17 +18,21 @@ Make sure that the branch is pointed at 'main'
 #### 1. Create the additional folders
 Open Terminal
 
+Change the directory (cd) to the top level of this repository (i.e in this level you should see the init_folders.sh)
+
 run: <code>bash init_folders.sh</code>
 
+When the terminal returns go to the next step
+
 #### 2. Build the react app
-change directory into xample/client/webapp
+change directory into xample/client/webapp (you should be able to successfully run: cd xample/client/webapp)
 
 run: <code>npm install</code>
 
 run: <code>npm run watch</code>
 
 #### 3. Create the images and run
-From a new terminal
+From a <b>new</b> terminal
 
 run: <code>docker-compose up --build</code>
 
