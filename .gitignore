@@ -2,3 +2,4 @@ postgres/data/
 redis/data/
 node_modules/
 build/
+xample/client/webapp/.env
