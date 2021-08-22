@@ -11,6 +11,15 @@ Applications required:
 - Terminal
 - Google Chrome
 
+> Note: This step is only required for Google Map features in the Journey Planner
+> Create a Google Cloud API Key with following APIs enabled
+>  - [Maps Javascript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
+>  - [Directions API](https://developers.google.com/maps/documentation/directions/get-api-key)
+>
+> Ensure that the following APIs are enabled
+> 
+> <img src="docs/google-cloud-enabled-apis.png" alt="drawing" style="width:300px;"/>
+
 #### 0. Getting the Resources
 Clone this git repository
 
@@ -27,6 +36,11 @@ When the terminal returns go to the next step
 
 #### 2. Build the react app
 change directory into xample/client/webapp (you should be able to successfully run: cd xample/client/webapp)
+
+> Note: This step is only required for Google Map features in the Journey Planner
+> 
+> In the .env file, set
+> REACT_APP_GOOGLE_MAP_API_KEY=<YOUR_API_KEY>
 
 run: <code>npm install</code>
 
