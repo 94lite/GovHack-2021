@@ -32,7 +32,6 @@ export default function Charts() {
     return item;
   });
   const diff = (data2[data2.length - 1].planted - data2[data2.length - 2].planted) - (data2[data2.length - 2].planted - data2[data2.length - 3].planted);
-  console.log(diff)
   return (
     <div>
       <Tabs className="garden-charts" size="small">
@@ -71,10 +70,10 @@ export default function Charts() {
           </div>
           <div style={{ marginTop: "8px" }}>
             <Card title="Collaborative" size="small">
-              <p style={p_style}><u>Registered:</u><span>Co-Tree <RiMedalFill style={{ color: "#faad14" }} /></span></p>
+              <p style={{ ...p_style, borderBottom: "1px solid #50A387" }}><span>Registered:</span><span>Co-Tree <RiMedalFill style={{ color: "#faad14" }} /></span></p>
               <p style={p_style}><span>Total this month:</span><span>{data2[data2.length - 1].planted - data2[data2.length - 2].planted} <FaLeaf/></span></p>
               <p style={p_style}><span style={{ marginLeft: "16px" }}>Average Contribution:</span><span>{(data2[data2.length - 1].planted - data2[data2.length - 2].planted)/6} <FaLeaf/></span></p>
-              <p style={p_style}><span style={{ marginLeft: "16px" }}>Performance Difference:</span><span style={{ color: diff === 0 ? undefined : diff > 0 ? "#52c41a" : "#f5222d" }}>{diff === 0 ? null : diff > 0 ? <CaretUpOutlined /> : <CaretDownOutlined />}{diff} <FaLeaf/></span></p>
+              <p style={{ ...p_style, borderBottom: "1px solid #50A387" }}><span style={{ marginLeft: "16px" }}>Performance Difference:</span><span style={{ color: diff === 0 ? undefined : diff > 0 ? "#52c41a" : "#f5222d" }}>{diff === 0 ? null : diff > 0 ? <CaretUpOutlined /> : <CaretDownOutlined />}{diff} <FaLeaf/></span></p>
               <p style={p_style}><span>Accumulated Total:</span><span style={{ color: "#13c2c2" }}><b>{data2[data2.length - 1].planted}</b> <FaLeaf/></span></p>
             </Card>
           </div>
